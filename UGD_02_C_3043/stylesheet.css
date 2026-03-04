@@ -1,0 +1,376 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    height:100vh;
+    overflow:hidden;
+}
+
+section{
+    position:relative;
+    height:100vh;
+    display:flex;
+}
+
+.left{
+    width:50%;
+    background: linear-gradient(to left bottom, #952c4d, #bb3e95, #f06292);
+    padding:100px 150px;
+    color:#111;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    position:relative;
+    z-index:1;
+}
+
+.right{
+    width:50%;
+    background: linear-gradient(to left bottom, #952c4d, #bb3e95, #f06292);
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.home-icon{
+    position:absolute;
+    top:25px;
+    left:30px;
+    background:white;
+    width:48px;
+    height:48px;
+    border-radius:10px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:20;
+    text-decoration:none;
+    font-size:22px;
+    color:#111;
+}
+
+
+nav{
+    position:absolute;
+    top:30px;
+    right:50px;
+    display:flex;
+    gap:30px;
+    align-items:center;
+    z-index:20;
+}
+
+nav a{
+    text-decoration:none;
+    color:white;
+    font-weight:500;
+    font-size:15px;
+}
+
+nav .btn{
+    background:white;
+    color:black;
+    padding:9px 22px;
+    border-radius:25px;
+    font-weight:700;
+    font-size:14px;
+    letter-spacing:0.5px;
+}
+
+
+.right::before{
+    content:"";
+    position:absolute;
+    left:-200px;
+    top:0;
+    width:300px;
+    height:200%;
+    background:#c7a638;
+    transform:skewX(-10deg);
+    z-index:0;
+}
+
+
+.home-content h3{
+    font-size:20px;
+    font-weight:500;
+    margin-bottom:5px;
+}
+
+.home-content h1{
+    font-size:64px;
+    font-weight:900;
+    line-height:1.05;
+}
+
+.home-content p{
+    margin-top:12px;
+    font-size:17px;
+    font-weight:400;
+}
+
+.social{
+    margin-top:30px;
+    display:flex;
+    gap:10px;
+}
+
+.social button{
+    width:48px;
+    height:48px;
+    border:none;
+    border-radius:12px;
+    background:white;
+    cursor:pointer;
+    font-size:18px;
+    font-weight:700;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+
+.profile{
+    z-index:2;
+    position:relative;
+}
+
+.profile img{
+    width:340px;
+    height:300px;
+    object-fit:cover;
+    border-radius:20px;
+    display:block;
+}
+
+
+.about-box{
+    width:68%;
+    background:rgba(255,255,255,0.12);
+    backdrop-filter:blur(10px);
+    padding:40px;
+    border-radius:20px;
+    color:white;
+    z-index:2;
+    position:relative;
+}
+
+.about-box h1{
+    font-size:36px;
+    font-weight:900;
+    margin-bottom:16px;
+}
+
+.about-box p{
+    font-size:14px;
+    line-height:1.7;
+    margin-bottom:6px;
+}
+
+.about-box br + p,
+.about-box p + p{
+    margin-top:8px;
+}
+
+
+.skills-container{
+    width:72%;
+    z-index:2;
+    position:relative;
+}
+
+.skills-container h2{
+    font-size:28px;
+    font-weight:900;
+    color:white;
+    margin-bottom:14px;
+    letter-spacing:1px;
+}
+
+.grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    margin-bottom:28px;
+}
+
+.grid div{
+    background:rgba(255,255,255,0.15);
+    padding:18px 10px 14px;
+    border-radius:14px;
+    text-align:center;
+    color:white;
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:8px;
+}
+
+.grid div img{
+    width:40px;
+    height:40px;
+    object-fit:contain;
+}
+
+
+.projects-wrapper{
+    width:72%;
+    z-index:2;
+    position:relative;
+}
+
+.projects-wrapper h2{
+    font-size:28px;
+    font-weight:900;
+    color:white;
+    margin-bottom:20px;
+    letter-spacing:1px;
+}
+
+.projects{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:16px;
+}
+
+.card{
+    background:rgba(255,255,255,0.13);
+    border-radius:18px;
+    color:white;
+    overflow:hidden;
+}
+
+.card-img{
+    width:100%;
+    height:110px;
+    object-fit:cover;
+    display:block;
+    background:#111;
+    border-radius:14px 14px 0 0;
+    card video,
+.card iframe{
+    width:100%;
+    height:110px;
+    object-fit:cover;
+    border-radius:14px 14px 0 0;
+    display:block;
+}
+}
+
+.card-img-placeholder{
+    width:100%;
+    height:110px;
+    background:rgba(0,0,0,0.4);
+    border-radius:14px 14px 0 0;
+}
+
+.card-body{
+    padding:14px 16px;
+}
+
+.card-body h3{
+    font-size:14px;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.card-body p{
+    font-size:11px;
+    opacity:0.85;
+    line-height:1.5;
+    margin-bottom:10px;
+}
+
+.card-tags{
+    display:flex;
+    gap:8px;
+}
+
+.tag{
+    background:rgba(255,255,255,0.2);
+    padding:4px 12px;
+    border-radius:20px;
+    font-size:10px;
+    font-weight:600;
+    letter-spacing:0.5px;
+    text-transform:uppercase;
+}
+
+
+.contact-form{
+    width:68%;
+    z-index:2;
+    position:relative;
+}
+
+.contact-form h2{
+    font-size:28px;
+    font-weight:900;
+    color:white;
+    margin-bottom:24px;
+    letter-spacing:1px;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    background:transparent;
+    border:none;
+    border-bottom:1.5px solid rgba(255,255,255,0.6);
+    color:white;
+    font-family:'Poppins',sans-serif;
+    font-size:14px;
+    padding:12px 4px;
+    margin-bottom:16px;
+    outline:none;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder{
+    color:rgba(255,255,255,0.75);
+}
+
+.contact-form textarea{
+    border:1.5px solid rgba(255,255,255,0.6);
+    border-radius:8px;
+    padding:12px;
+    height:100px;
+    resize:none;
+}
+
+.contact-form button{
+    width:100%;
+    background:white;
+    color:#111;
+    border:none;
+    padding:14px;
+    border-radius:30px;
+    font-size:14px;
+    font-weight:700;
+    letter-spacing:1px;
+    cursor:pointer;
+    margin-top:6px;
+}
+
+
+.left h1{
+    font-size:44px;
+    font-weight:900;
+    margin-bottom:16px;
+}
+
+.left p{
+    font-size:15px;
+    line-height:1.6;
+}
